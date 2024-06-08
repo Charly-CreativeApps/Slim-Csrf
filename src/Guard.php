@@ -215,7 +215,7 @@ class Guard implements MiddlewareInterface
     public function generateToken(): array
     {
         // Generate new CSRF token
-        $name = uniqid($this->prefix);
+        $name = uniqid($this->prefix, true);
         $value = $this->createToken();
         $this->saveTokenToStorage($name, $value);
 
