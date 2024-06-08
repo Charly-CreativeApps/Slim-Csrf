@@ -2,7 +2,13 @@
 
 See https://github.com/slimphp/Slim-Csrf/releases for a full list
 
-## Next
+## 2.x
+
+- Fixed: The key names are now the correct format to be sent as headers. 
+
+  This is a potential BC break. The key names now use a dash rather than an
+  underscore. This should not affect anyone who uses the relvant methods, but
+  if you have hard-coded, then they will need to be updated.
 
 ## 1.5.0
 
