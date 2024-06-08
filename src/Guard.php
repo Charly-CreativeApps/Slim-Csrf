@@ -50,7 +50,7 @@ class Guard implements MiddlewareInterface
     protected ResponseFactoryInterface $responseFactory;
 
     /**
-     * Prefix for CSRF parameters (omit trailing "_" underscore)
+     * Prefix for CSRF parameters (omit trailing "-")
      */
     protected string $prefix;
 
@@ -122,7 +122,7 @@ class Guard implements MiddlewareInterface
         }
 
         $this->responseFactory = $responseFactory;
-        $this->prefix = rtrim($prefix, '_');
+        $this->prefix = rtrim($prefix, '-');
         $this->strength = $strength;
 
         $this->setStorage($storage);
@@ -269,7 +269,7 @@ class Guard implements MiddlewareInterface
      */
     public function getTokenNameKey(): string
     {
-        return $this->prefix . '_name';
+        return $this->prefix . '-name';
     }
 
     /**
@@ -277,7 +277,7 @@ class Guard implements MiddlewareInterface
      */
     public function getTokenValueKey(): string
     {
-        return $this->prefix . '_value';
+        return $this->prefix . '-value';
     }
 
     /**
