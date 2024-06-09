@@ -10,6 +10,8 @@ See https://github.com/slimphp/Slim-Csrf/releases for a full list
   underscore. This should not affect anyone who uses the relvant methods, but
   if you have hard-coded, then they will need to be updated.
 
+- Changed: Increased likelihood that tokens are unique. 
+
 ## 1.5.0
 
 - Added: Support for PHP 8.2 and 8.3
